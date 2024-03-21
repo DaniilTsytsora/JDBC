@@ -1,4 +1,4 @@
-package org.example.jdbc1.app.dbConfig;
+package org.example.jdbc1.app.db_config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -7,7 +7,7 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import javax.sql.DataSource;
 
 @Configuration
-public class dbConfig {
+public class db_config {
     @Bean
     public NamedParameterJdbcTemplate template(DataSource dataSource) {
         return new NamedParameterJdbcTemplate(dataSource);

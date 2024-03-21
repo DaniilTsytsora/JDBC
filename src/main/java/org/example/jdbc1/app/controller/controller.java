@@ -1,15 +1,15 @@
 package org.example.jdbc1.app.controller;
 
 import org.example.jdbc1.app.user.user;
-import org.example.jdbc1.app.userDao.userDao;
+import org.example.jdbc1.app.user_dao.user_dao;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class controller {
 
-    private final userDao dao;
+    private final user_dao dao;
 
-    public controller(userDao dao) {
+    public controller(user_dao dao) {
         this.dao = dao;
     }
 

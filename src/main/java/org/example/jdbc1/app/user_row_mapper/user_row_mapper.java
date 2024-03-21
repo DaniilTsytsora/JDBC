@@ -1,11 +1,11 @@
-package org.example.jdbc1.app.userRowMapper;
+package org.example.jdbc1.app.user_row_mapper;
 
 import org.example.jdbc1.app.user.user;
 import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class userRowMapper implements RowMapper<user> {
+public class user_row_mapper implements RowMapper<user> {
 
     @Override
     public user mapRow(ResultSet rs, int rowNum) throws SQLException {

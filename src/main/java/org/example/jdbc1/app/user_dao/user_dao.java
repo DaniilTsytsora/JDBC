@@ -1,6 +1,6 @@
-package org.example.jdbc1.app.userDao;
+package org.example.jdbc1.app.user_dao;
 import org.example.jdbc1.app.user.user;
-import org.example.jdbc1.app.userRowMapper.userRowMapper;
+import org.example.jdbc1.app.user_row_mapper.user_row_mapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -9,10 +9,10 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public class userDao {
+public class user_dao {
     private final NamedParameterJdbcTemplate template;
 
-    public userDao(NamedParameterJdbcTemplate template) {
+    public user_dao(NamedParameterJdbcTemplate template) {
         this.template = template;
     }
 
@@ -34,7 +34,7 @@ public class userDao {
     public user getUserById(long id) {
         String sql = "SELECT * FROM user WHERE user.id = :id";
         MapSqlParameterSource paramMap = new MapSqlParameterSource("id", id);
-        return template.queryForObject(sql, paramMap, new userRowMapper());
+        return template.queryForObject(sql, paramMap, new user_row_mapper());
     }
 
     public void editUser(user user) {
